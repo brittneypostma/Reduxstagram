@@ -6,16 +6,13 @@ body
   background offwhite
 
 .photo-grid
-  display flex
-  flex-wrap wrap
+  display grid    
+  grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap 40px
   max-width 1200px
   margin 0 auto
 
 .grid-figure
-  flex-basis calc(33.333% - 4rem)
-  flex-grow 1
-  flex-shrink 0
-  margin 0 2rem 2rem 2rem
   padding 2rem
   border 1px solid lightgray
   background white
@@ -48,6 +45,13 @@ body
   margin-left -2rem
   margin-top -2rem
   max-width none
+
+.grid-photo-wrap
+  display grid
+  align-content space-between
+  position absolute
+  overflow hidden
+  height 100%
 
 // Comments
 .remove-comment
